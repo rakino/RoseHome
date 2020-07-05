@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'Century Gothic';
+    src: url("../fonts/CenturyGothic.ttf") format("TrueType");
+}
+
+@font-face {
+    font-family: 'Verdana Pro SemiBold';
+    src: url("../fonts/VerdanaPro-CondSemiBold.ttf") format("TrueType");
+}
+
+@font-face {
+    font-family: 'Gill Sans Nova';
+    src: url("../fonts/GillSansNovaBook.ttf") format("TrueType");
+}
+
+@font-face {
+    font-family: 'Jin Kai';
+    src: url("../fonts/jinkai.ttf") format("TrueType");
+}
+
+@font-face {
+    font-family: 'Eras Light ITC';
+    src: url("../fonts/eraslght.ttf") format("TrueType");
+}
+
+@font-face {
+    font-family: 'Edwardian Script ITC';
+    src: url("../fonts/EdwardianScriptITC.ttf") format("TrueType");
+}
+
+@font-face {
+    font-family: 'GungsuhChe';
+    src: url("../fonts/GungsuhChe W33 Regular.ttf") format("TrueType");
+}
+
+@font-face {
+    font-family: 'Zhi Mang Xing';
+    src: url("../fonts/ZhiMangXing-Regular.ttf") format("TrueType");
+}
+
+@font-face {
+    font-family: 'Mistral';
+    src: url("../fonts/MISTRAL.TTF") format("TrueType");
+}
+
+@font-face {
+    font-family: 'Copperplate Gothic Light';
+    src: url("../fonts/Copperplate Gothic Light Regular.ttf") format("TrueType");
+}
