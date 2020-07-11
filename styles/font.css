@@ -47,3 +47,8 @@
     font-family: 'Copperplate Gothic Light';
     src: url("../fonts/Copperplate Gothic Light Regular.ttf") format("TrueType");
 }
+
+@font-face {
+    font-family: 'Liu Jian Mao Cao';
+    src: url("../fonts/LiuJianMaoCao-Regular.ttf") format("TrueType");
+}
