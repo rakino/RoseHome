@@ -12,6 +12,7 @@
         <script src="scripts/semantic.min.js"></script>
         <link rel="stylesheet" type="text/css" href="styles/aos.css">
         <script src="scripts/aos.js"></script>
+        <script src="scripts/parallax.min.js"></script>
 
         <!-- Include custom CSS -->
         <link rel="stylesheet" type="text/css" href="styles/font.css">
@@ -26,13 +27,6 @@ section {
   font-size: 20vh;
 }
 
-.g-img {
-  background-image: url(images/example.png);
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center center;
-}
-
 .g-word {
   color: white;
   font-size: 64px;
@@ -41,12 +35,11 @@ section {
   </style>
 
     </head>
-
     <body style="background: rgba(0, 0, 0, .7)">
       <!-- Header -->
-      <div class="ui center aligned massive header" style="background-color: floralwhite">
+      <nav class="ui center aligned massive header" style="background-color: floralwhite; margin-top: 0">
         <a href="index.html" class="font-cooperplate" style="color: #ff6666;">Rose Home</a>
-      </div>
+      </nav>
 
       <section class="g-word"
                data-aos="fade-up"
@@ -60,7 +53,7 @@ section {
         Lorem
       </section>
 
-      <section class="g-img"></section>
+      <section class="parallax-window" data-parallax="scroll" data-image-src="images/example.png"></section>
 
       <section class="g-word"
                data-aos="fade-up"
@@ -74,7 +67,7 @@ section {
         Mauris
       </section>
 
-      <section class="g-img"></section>
+      <section class="parallax-window" data-parallax="scroll" data-image-src="images/example.png"></section>
 
       <section class="g-word"
                data-aos="fade-up"
@@ -88,7 +81,7 @@ section {
         Sed 
       </section>
 
-      <section class="g-img"></section>
+      <section class="parallax-window" data-parallax="scroll" data-image-src="images/example.png"></section>
 
       <section class="g-word"
                data-aos="fade-up"
