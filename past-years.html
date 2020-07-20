@@ -21,7 +21,6 @@
   <style>
 section {
   height: 100vh;
-  color: #fff;
   line-height: 100vh;
   text-align: center;
   font-size: 20vh;
@@ -32,15 +31,20 @@ section {
   font-size: 64px;
   text-align: center;
 }
+
+.img {
+  background-image: url('images/example.png');
+  background-size: cover;
+}
+
   </style>
 
     </head>
     <body style="background: rgba(0, 0, 0, .7)">
-      <!-- Header -->
-      <nav class="ui center aligned massive header" style="background-color: floralwhite; margin-top: 0">
+      <nav class="ui center aligned massive header" style="background-color: floralwhite; margin-top: 0; margin-bottom: 0;">
         <a href="index.html" class="font-cooperplate" style="color: #ff6666;">Rose Home</a>
       </nav>
-
+      <div class="img">
       <section class="g-word"
                data-aos="fade-up"
                data-aos-offset="200"
@@ -52,9 +56,9 @@ section {
                data-aos-anchor-placement="top-center">
         Lorem
       </section>
+      </div>
 
-      <section class="parallax-window" data-parallax="scroll" data-image-src="images/example.png"></section>
-
+      <div class="img">
       <section class="g-word"
                data-aos="fade-up"
                data-aos-offset="200"
@@ -63,12 +67,13 @@ section {
                data-aos-easing="ease-in-out"
                data-aos-mirror="true"
                data-aos-once="false"
-               data-aos-anchor-placement="top-center">
+               data-aos-anchor-placement="top-center"
+               style="background-image=url("images/example.png")">
         Mauris
       </section>
-
-      <section class="parallax-window" data-parallax="scroll" data-image-src="images/example.png"></section>
-
+      </div>
+      
+      <div class="img">
       <section class="g-word"
                data-aos="fade-up"
                data-aos-offset="200"
@@ -77,12 +82,13 @@ section {
                data-aos-easing="ease-in-out"
                data-aos-mirror="true"
                data-aos-once="false"
-               data-aos-anchor-placement="top-center">
+               data-aos-anchor-placement="top-center"
+               style="background-image=url("images/example.png")">
         Sed 
       </section>
-
-      <section class="parallax-window" data-parallax="scroll" data-image-src="images/example.png"></section>
-
+      </div>
+      
+      <div class="img">
       <section class="g-word"
                data-aos="fade-up"
                data-aos-offset="200"
@@ -91,9 +97,11 @@ section {
                data-aos-easing="ease-in-out"
                data-aos-mirror="true"
                data-aos-once="false"
-               data-aos-anchor-placement="top-center">
+               data-aos-anchor-placement="top-center"
+               style="background-image=url("images/example.png")">
         Footer
       </section>
+      </div>
 
 
       <script>
