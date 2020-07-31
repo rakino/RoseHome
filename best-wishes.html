@@ -1,22 +1,201 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <!-- Standard Meta -->
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maxium-scale=1.0">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="generator" content="Zettlr" />
+  <meta name="date" content="" />
+  <title></title>
+  <style type="text/css">
+  * {
+    box-sizing: border-box;
+  }
 
-        <!-- Include scripts and styles, and it's required to include jQuery first here -->
-        <script src="scripts/jquery.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="styles/semantic.min.css">
-        <script src="scripts/semantic.min.js"></script>
+  a {
+    color: #FF7C3B;
+    text-decoration: none;
+  }
 
-        <!-- Include custom CSS -->
-        <link rel="stylesheet" type="text/css" href="styles/font.css">
-        <link rel="stylesheet" type="text/css" href="styles/font-class.css">
-    </head>
-    
-    <body>
-      
-    </body>
+  a:hover {
+    text-decoration: underline;
+  }
+
+  hr {
+    border: none;
+    border-bottom: 1px solid #999;
+    width: 80%;
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background-color: white;
+    color: #333;
+    font-family: 'DejaVu', 'Georgia', 'Times New Roman', 'Times', serif;
+  }
+
+  article {
+    width: 50%;
+    font-size: 1.5em;
+    margin: 0 auto;
+    line-height: 150%;
+  }
+
+  /* Better display on printing */
+  @media print {
+    article {
+      width: 90%;
+      font-size: 12pt;
+      margin: 0 auto;
+      line-height: 150%;
+    }
+  }
+
+  article p {
+    hyphens: auto;
+    text-align: justify;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Raleway', 'Lato', 'Liberation sans', 'Helvetica', sans-serif;
+    color: #FF7C3B;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  blockquote {
+    font-size: 80%;
+    color: rgba(120, 120, 120, 1);
+    margin: 2% 5%;
+    line-height: 120%;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 70%;
+    font-family: 'Raleway', 'Lato', 'Liberation sans', 'Helvetica', sans-serif;
+  }
+
+  th, td {
+    padding: 4px 20px;
+    border-bottom: 1px solid #333;
+  }
+
+  /* List of classes taken from the skylighting lib */
+  /* See: https://github.com/jgm/skylighting/blob/master/skylighting-core/src/Skylighting/Format/HTML.hs */
+
+  /* Colors: Solarized theme (light) */
+  /* See: https://ethanschoonover.com/solarized/ */
+
+  /* Specific implementation: Taken from the GEdit theme (light) */
+  /* See: https://github.com/altercation/solarized/blob/master/gedit/solarized-light.xml */
+
+  /* Generic styles */
+  pre.sourceCode {
+    color: #657b83;
+    background-color: #fdf6e3;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, .05);
+    padding: 2px;
+    overflow: auto;
+  }
+
+  /* All classes, taken from skylighting lib */
+  .sourceCode .kw { color: #859900; font-weight: bold; } /* Keyword */
+  .sourceCode .dt { color: #b58900; } /* Datatype */
+  .sourceCode .df { color: #d33682; } /* Decimal values*/
+  .sourceCode .bn { color: #d33682; } /* base-n-integers */
+  .sourceCode .fl { color: #d33682; } /* Floats */
+  .sourceCode .ch { color: #2aa198; } /* Character */
+  .sourceCode .st { color: #2aa198; } /* String */
+  .sourceCode .vs { color: #2aa198; } /* Verbatim String */
+  .sourceCode .ss { color: #2aa198; } /* Special String */
+  .sourceCode .co { color: #586e75; font-style: italic; } /* Comment */
+  .sourceCode .ot { font-weight: bold; } /* Other token */
+  .sourceCode .al { color: #d33682; background-color: #073642; } /* Alert */
+  .sourceCode .fu { color: #268bd2; } /* Function name */
+  .sourceCode .re {} /* Region marker */
+  .sourceCode .er { color: #dc322f; font-weight: bold; } /* Error */
+  .sourceCode .cn { color: #2aa198; } /* Constant */
+  .sourceCode .sc { color: #dc322f; } /* Special character */
+  .sourceCode .im { color: #6c71c4; font-weight: bold; } /* Import statement */
+  .sourceCode .do { color: #dc322f; } /* Documentation string */
+  .sourceCode .an { color: #2aa198; } /* Annotation */
+  .sourceCode .cv { color: #6c71c4; } /* Comment var */
+  .sourceCode .va { color: #268bd2; } /* Variable */
+  .sourceCode .cf { color: #859900; } /* Control Flow (if, else, return) */
+  .sourceCode .op {} /* Operator */
+  .sourceCode .bu { color: #b58900; } /* Builtin function/class/identifier */
+  .sourceCode .ex { color: #268bd2; } /* Extension */
+  .sourceCode .pp { color: #cb4b16; } /* Preprocessor, like #import in C++ */
+  .sourceCode .at { color: #dc322f; } /* Attribute */
+  .sourceCode .in { color: #586e75; } /* Information */
+  .sourceCode .wa { color: #cb4b16; } /* Warning */
+  </style>
+
+<!-- Pandoc variables -->
+
+<!-- Additional CSS in case the user has passed it -->
+<script src="scripts/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="styles/semantic.min.css">
+<script src="scripts/semantic.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="styles/font.css">
+<link rel="stylesheet" type="text/css" href="styles/font-class.css">
+<!-- Include MathJax CDN, if applicable -->
+</head>
+<body>
+  <!-- Header -->
+    <div class="ui center aligned massive header" style="background-color: floralwhite;">
+        <a href="index.html" class="font-cooperplate" style="color: #ff6666;">Rose Home</a>
+    </div>
+  <!-- Render in article for reader view enabling -->
+    <article>
+    <p><img class="ui bordered rounded image" src="images/image-1.jpg" /></p>
+    <blockquote>
+    <p>黄子韬的女人，生日快乐。以后的日子里，我们继续一起工作，一起挣钱，下班了你可以去跳跳舞，我可以去跑跑步，空闲时间我再做几个小菜，喝两杯小酒，吃完饭一起窝在沙发里，你打打游戏，我追追剧，继续我们简单而又平凡的生活，爱你哟。</p>
+    </blockquote>
+    <p>-— 秋</p>
+    <p><img class="ui bordered rounded image" src="images/image-2.jpg" /></p>
+    <blockquote>
+    <p>Don’t worry , I’m here till the end of time.</p>
+    </blockquote>
+    <p>-— Xly</p>
+    <p><img class="ui bordered rounded image" src="images/image-3.jpg" /></p>
+    <blockquote>
+    <p>任虹，生日快乐！一晃五年了，这是我们给你过的第五个生日，感谢一路有你，祝你一夜暴富，活成自己想要的样子永远爱你！</p>
+    </blockquote>
+    <p>-— Peter</p>
+    <p><img class="ui bordered rounded image" src="images/image-4.jpg" /></p>
+    <blockquote>
+    <p>生日快乐！永远美丽，永远可爱，永远爱你，陪你度过一年又一年。</p>
+    </blockquote>
+    <p>-— 晓霖</p>
+    <p><img class="ui bordered rounded image" src="images/image-5.jpg" /></p>
+    <blockquote>
+    <p>因为你十八岁了，正值青春，或许自己会想需不需要找一个踏实的生活，但我永远相信你相信你的青春不会结束，请任你心中的彩虹一直绚烂一直拥有无限光芒</p>
+    </blockquote>
+    <p>-— 邹婧怡</p>
+    <p><img class="ui bordered rounded image" src="images/image-6.jpg" /></p>
+    <blockquote>
+    <p>世界上有那么多人，我很幸运在那么多人分之一的概率中成为你的学生。师生情已系，日后君为父。此生得相遇，人离心相依。任老师，生日快乐! (^ O ^)</p>
+    </blockquote>
+    <p>-— 王霭语</p>
+    <p><img class="ui bordered rounded image" src="images/image-7.jpg" /></p>
+    <blockquote>
+    <p>成功源自您的栽培，优秀出自您的耕耘；为今天喝彩的同时，我永远铭记您当初的教诲与引导。祝您桃李满天下，春晖遍四方。生日快乐🎂🎂</p>
+    </blockquote>
+    <p>-— 徐仕林</p>
+    <p><img class="ui bordered rounded image" src="images/image-8.jpg" /></p>
+    <blockquote>
+    <p>亲爱的任妈！又是一年新的生日啦！不知道你还记得你教的第一届学生吗，因为我们快高三了，好多同学都没时间来给你庆祝生日，所以只能用这种形式来表达我们对你的爱！不知道你找到男朋友没呀，我们可是要吃喜糖的呢！虽然初中我很不安分守己，惹你不知道生了多少次气，也让自己挨了多少顿打，但是现在超级怀念啊！如果可以还想做你的学生，还想重新读一次初中！我们爱你！祝你永远开心！永远18岁！ ！对了 记得找爸爸！生日快乐🎂🎂🎂🎊🎊🎉！</p>
+    </blockquote>
+    <p>-— 让你不省心的袁一为</p>
+  </article>
+</body>
 </html>
